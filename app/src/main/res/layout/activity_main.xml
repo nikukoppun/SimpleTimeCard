@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actTimeCardActivity">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2020/06/10"
+            android:textSize="25sp" />
+
+        <TextClock
+            android:id="@+id/txt_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:format24Hour="hh:mm:ss"
+            android:textSize="40sp"
+            android:gravity="center_horizontal"
+            android:textColor="#F00000"
+            />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            tools:ignore="MissingConstraints"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_IN"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/button"
+                android:onClick="selector_button_Click"
+                android:textSize="20sp"
+                android:text="出勤" />
+            <Button
+                android:id="@+id/btn_OUT"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/button"
+                android:onClick="selector_button_Click"
+                android:textSize="20sp"
+                android:text="退勤" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            tools:ignore="MissingConstraints"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/txt_IN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="出勤："
+                />
+            <TextView
+                android:id="@+id/txt_OUT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="退社："
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            tools:ignore="MissingConstraints"
+            android:orientation="vertical" >
+            <EditText
+                android:id="@+id/txt_MEMO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:textSize="20sp"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:text="メモ欄"
+                />
+            <Button
+                android:id="@+id/btn_SaveMemo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/button"
+                android:onClick="SaveMemo_Click"
+                android:textSize="12sp"
+                android:text="メモを保存" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            tools:ignore="MissingConstraints"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_BeforeDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/button"
+                android:onClick="BeforeDate_Click"
+                android:textSize="12sp"
+                android:text="前日へ" />
+            <Button
+                android:id="@+id/btn_NextDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/button"
+                android:onClick="NextDate_Click"
+                android:textSize="12sp"
+                android:text="翌日へ" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
